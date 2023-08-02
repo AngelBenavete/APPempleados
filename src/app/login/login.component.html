@@ -1,0 +1,18 @@
+<div>
+    <br>
+
+    <form class="formulario" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+        <h1 class="titulo">Inicia Sección</h1>
+        <div class="form-grupo">
+            <input type="email" name="email" placeholder="Email" class="celda" ngModel>
+        </div>
+        <div class="form-grupo">
+            <input type="password" name="password" placeholder="Password" class="celda" ngModel>
+        </div>  
+        <br><br>
+
+        <div class="boton-container">
+            <button type="submit" class="boton">Login</button>
+        </div>
+    </form>
+</div>

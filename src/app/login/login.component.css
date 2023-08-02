@@ -1,0 +1,45 @@
+.titulo{
+    color: #fff;
+    position: relative;
+    bottom: 30px;
+    color: #ddd;
+    background-color: #0000;
+    text-shadow: 0px 0px 3px #eee;
+}
+
+.formulario{
+    background-color: #3337;
+    padding: 80px 30px;
+    width: 350px;
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 10px 50px;
+    box-shadow: 5px 5px 10px #333c;
+    display: grid;
+    place-items: center;
+    border: #ddd solid 2px;
+}
+
+.form-grupo{
+    margin-bottom: 15px;
+}
+
+.celda{
+    border-radius: 10px;
+    background-color: #eee;
+    border: none;
+    padding: 8px 15px;
+}
+
+.boton{
+    background-color: #4c9daf;
+    border: none;
+    color: #ddd;
+    padding: 10px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 20px;
+}
