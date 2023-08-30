@@ -17,13 +17,14 @@
     margin-top: 30px;
     border-radius: 10px 50px;
     box-shadow: 5px 5px 10px #333c;
-    display: grid;
-    place-items: center;
+    text-align: center;
+    /* display: grid;
+    place-items: center; */
     border: #ddd solid 2px;
 }
 
 .form-grupo{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .celda{
@@ -34,6 +35,8 @@
 }
 
 .boton{
+    position: relative;
+    bottom: 35px;
     background-color: #4c9daf;
     border: none;
     color: #ddd;

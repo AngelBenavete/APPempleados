@@ -8,7 +8,7 @@ import { EmpleadoService } from '../empleado.service';
   styleUrls: ['./home-component.component.css']
 })
 export class HomeComponentComponent implements OnInit {
-  titulo = 'Listado de Empleados';
+  titulo = 'Agregue las Actividades';
   today: number = Date.now();
 
   constructor(private empleadoService: EmpleadoService) {

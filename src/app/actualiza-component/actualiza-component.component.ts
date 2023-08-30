@@ -9,7 +9,7 @@ import { EmpleadoService } from '../empleado.service';
   styleUrls: ['./actualiza-component.component.css']
 })
 export class ActualizaComponentComponent implements OnInit {
-  titulo = 'Actualiza el Empleado';
+  titulo = 'Actualizar la actividad';
   constructor(private router:Router, private route:ActivatedRoute,private empleadoService: EmpleadoService) { }
 
   empleados:Empleado[]=[];

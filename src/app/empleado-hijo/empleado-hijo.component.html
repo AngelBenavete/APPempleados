@@ -1,17 +1,15 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
+    <div>
+        <b>{{indice+1}}: Titulo:</b> {{empleado.nombre}}<br>
+        <b>Descripcion:</b> {{empleado.apellido}}<br>
+        <b>Observaciones:</b> {{empleado.cargo}}<br>
+        <b>Estado:</b> {{empleado.salario}}<br><br>
 
-            <div>
-                    {{indice+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
-                
-                <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:1}">
-                    Actualizar
-                </a>
-                <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:2}">
-                    Eliminar
-                </a>
-            </div>
-        </div>
+        <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:1}">
+            Actualizar
+        </a>
+        <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:2}">
+            Eliminar
+        </a>
     </div>
 </div>

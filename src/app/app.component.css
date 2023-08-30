@@ -1,14 +1,16 @@
 body{
-    background-image: url(https://images4.alphacoders.com/131/1318503.jpeg);
-    height: 100%;
-    width: 100%;
-    background-size:cover;
+    background-image: url(../assets/images/ventura.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: fit-content;
+    position: absolute;
+    width: 100%;
 }
 
 .navegacion{
-    background-color: #333;
+    background-color: #33333382;
     margin: 0;
     margin-bottom: 50px;
     padding-top: 0.1px;
@@ -22,7 +24,6 @@ body{
     color: #fff;
     margin: 15px;
     font-size: 20px;
-    background-color: #333;
 }
 
 .link{
@@ -32,13 +33,12 @@ body{
     text-decoration: none;
     margin: 0 5px;
     color: #fff;
-    background-color: #333;
     padding: 6px 10px;
     border-radius: 20px;
 }
 
 .link:hover{
-    background-color: #202124;
+    background-color: #444;
 }
 
 .itemslog{
