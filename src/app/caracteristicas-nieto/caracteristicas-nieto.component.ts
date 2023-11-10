@@ -12,11 +12,13 @@ export class CaracteristicasNietoComponent implements OnInit {
 
   constructor(private miServicio: ServicioEmpleadoService){}
 
+  ngOnInit(): void {
+  }
+
   agregaCaracteristicas(value: string){
     this.miServicio.muestramensaje("Caracteristica: " + value);
     this.caracteristicasEmpleado.emit(value);
   }
 
-  ngOnInit(): void {
-  }
 }
+

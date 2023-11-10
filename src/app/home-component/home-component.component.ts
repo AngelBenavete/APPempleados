@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Empleado } from '../empleado.model';
 import { EmpleadoService } from '../empleado.service';
+import { LoginService } from '../login.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-home-component',
@@ -11,7 +13,7 @@ export class HomeComponentComponent implements OnInit {
   titulo = 'Agregue las Actividades';
   today: number = Date.now();
 
-  constructor(private empleadoService: EmpleadoService) {
+  constructor(private empleadoService: EmpleadoService, private loginService:LoginService, private Hora: DatePipe) {
     //this.empleados=this.empleadoService.empleados;
   }
 
@@ -26,13 +28,21 @@ export class HomeComponentComponent implements OnInit {
 
   cuadroNombre:string="";
   cuadroApellido:string="";
-  cuadroCargo:string="";
-  cuadroSalario:number=0;
+  cuadroCargo:string | null = this.Hora.transform(new Date(), 'MM/dd/yy, h:mm a');
+  cuadroSalario:string="";
 
   empleados:Empleado[]=[];
 
   agregarEmpleado(){
     let miEmpleado=new Empleado(this.cuadroNombre, this.cuadroApellido, this.cuadroCargo, this.cuadroSalario);
     this.empleadoService.agregarEmpleadoService(miEmpleado);
+  }
+
+  login(){
+    return this.loginService.getIdToken();
+  }
+
+  logout(){
+    this.loginService.logout();
   }
 }

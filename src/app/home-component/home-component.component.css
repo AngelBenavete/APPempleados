@@ -1,16 +1,29 @@
-.container{
-    background-color: #6c432597;
-    padding: 20px;
+.contenedor{
+    background-color: #000000a4;
+    padding: 20px 20px;
     border-radius: 10px;
-    color: #eee;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.container{
+    background-color: #3b3030;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ddd;
 }
 
 .boton{
     background-color: #4c9daf;
     border: none;
-    color: #ddd;
+    color: inherit;
     padding: 8px 25px;
     text-align: center;
     display: inline-block;
     border-radius: 20px;
+}
+
+.titulo{
+    color: #ddd;
 }

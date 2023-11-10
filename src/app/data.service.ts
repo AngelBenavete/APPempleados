@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Empleado } from './empleado.model';
 import { LoginService } from './login.service';
+// import { EmpleadoHijoComponent } from './empleado-hijo/empleado-hijo.component';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,14 @@ export class DataService {
       error=> console.log("Error: " + error),
     );
   }
+
+  // guardarComentario(arrayCaracteristicas:EmpleadoHijoComponent["arrayCaracteristicas"]){
+  //   this.httpClient.put('https://mis-clientes-5cc2a-default-rtdb.firebaseio.com/datos.json',arrayCaracteristicas).subscribe(
+
+  //     response=> console.log("Se han guadado el comentario: " + response),
+  //     error=> console.log("Error: " + error),
+  //   );
+  // }
 
   actualizarEmpleado(indice:number, empleado:Empleado){
     const token = this.loginService.getIdToken();

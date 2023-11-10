@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { EmpleadoHijoComponent } from './empleado-hijo/empleado-hijo.component';
@@ -19,11 +18,12 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginGuardian } from './login/login-guardian';
+import { DatePipe } from '@angular/common';
 
 const appRoutes:Routes=[
-  {path: "", component:HomeComponentComponent, canActivate:[LoginGuardian]},
-  {path: "quienes", component:QuienesComponentComponent, canActivate:[LoginGuardian]},
-  {path: "contacto", component:ContactoComponentComponent, canActivate:[LoginGuardian]},
+  {path: "", component:HomeComponentComponent},
+  {path: "quienes", component:QuienesComponentComponent},
+  {path: "contacto", component:ContactoComponentComponent},
   {path: "actualizar/:id", component:ActualizaComponentComponent, canActivate:[LoginGuardian]},
   {path: "login", component:LoginComponent},
   {path: "**", component:ErrorPersonalizadoComponent}
@@ -46,7 +46,7 @@ const appRoutes:Routes=[
     RouterModule.forRoot(appRoutes),
     HttpClientModule
   ],
-  providers: [ServicioEmpleadoService, EmpleadoService, DataService, LoginService, CookieService, LoginGuardian],
+  providers: [ServicioEmpleadoService, EmpleadoService, DataService, LoginService, CookieService, LoginGuardian, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

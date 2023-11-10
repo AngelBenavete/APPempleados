@@ -1,10 +1,10 @@
 .container{
-    background-color: #6c432597;
-    border-radius: 10px;
+    background-color: #3b3030;
+    border-radius: 5px;
     padding: 10px;
     color: #ddd;
     margin-bottom: 10px;
-    line-height: 28px;
+    line-height: 23px;
     /* text-align: center; */
 }
 
@@ -15,4 +15,19 @@
     padding: 5px 10px;
     border-radius: 10px;
     margin-right: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.titulo{
+    margin: 10px 20px;
+    display: inline-block;
+}
+
+.comentario{
+    margin: 5px 0px;
+}
+
+.indice{
+    font-size: 2rem;
 }

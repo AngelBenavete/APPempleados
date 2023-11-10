@@ -1,5 +1,6 @@
 <div>
-    <label>Agrega Características: <input type="text" placeholder="Características" name="caracteristica" #nuevaCaracteristica></label>  
-    <button type="button" class="btn btn-primary" (click)="agregaCaracteristicas(nuevaCaracteristica.value)">Agrega</button>
+    <label class="etiqueta">Agrega Características: </label>
+    <input type="text" class="formulario" placeholder="Características" #nuevaCaracteristica>
+    <button type="button" class="boton" (click)="agregaCaracteristicas(nuevaCaracteristica.value)">Agrega</button>
 </div>
 

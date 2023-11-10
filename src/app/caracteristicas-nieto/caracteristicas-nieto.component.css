@@ -1,0 +1,15 @@
+.formulario{
+    border-radius: 10px;
+    background-color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin: 0px 5px;
+}
+
+.boton{
+    background-color: #4c9daf;
+    color: inherit;
+    border: none;
+    padding: 7px 13px;
+    border-radius: 10px;
+}

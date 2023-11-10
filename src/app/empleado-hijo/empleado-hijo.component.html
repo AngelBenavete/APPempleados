@@ -1,15 +1,23 @@
 <div class="container">
     <div>
-        <b>{{indice+1}}: Titulo:</b> {{empleado.nombre}}<br>
+        <span class="indice">{{indice+1}}.</span> <div class="titulo"><h2>{{empleado.nombre}}</h2></div> <br>
         <b>Descripcion:</b> {{empleado.apellido}}<br>
-        <b>Observaciones:</b> {{empleado.cargo}}<br>
-        <b>Estado:</b> {{empleado.salario}}<br><br>
+        <b>Estado:</b> {{empleado.salario}}<br>
+        <b>Fecha y hora:</b> {{empleado.cargo}}
 
-        <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:1}">
+        <br *ngIf="login()"><br *ngIf="login()">
+
+        <a *ngIf="login()" class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:1}">
             Actualizar
         </a>
-        <a class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:2}">
+        <a *ngIf="login()" class="link" [routerLink]="['/actualizar', indice]" [queryParams]="{accion:2}">
             Eliminar
         </a>
     </div>
+    
+    <app-caracteristicas-nieto (caracteristicasEmpleado)="agregarCaractersitica($event)"></app-caracteristicas-nieto>
+    
+    <ul style="list-style: none;">
+        <li class="comentario" *ngFor="let caracteristica of arrayCaracteristicas">{{caracteristica}}</li>
+    </ul>
 </div>

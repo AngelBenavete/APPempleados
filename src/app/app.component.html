@@ -5,17 +5,17 @@
     
     <div class="barra" id="navbarNav">
         <ul class="nav">
-        <li class="items" *ngIf="login()">
+        <li class="items">
             <a class="link" href="">Home <span class="sr-only"></span></a>
         </li>
-        <li class="items" *ngIf="login()">
+        <li class="items">
             <a class="link" href="quienes">¿Quien Soy?</a>
         </li>
-        <li class="items" *ngIf="login()">
+        <li class="items">
             <a class="link" href="contacto">Contactos</a>
         </li>
         <li class="itemslog" *ngIf="!login()">
-            <a class="link1" href="#"></a>
+            <a class="link" href="login">Login</a>
         </li>
         <li class="itemslog" *ngIf="login()">
             <a class="link" (click)="logout()">Logout</a>

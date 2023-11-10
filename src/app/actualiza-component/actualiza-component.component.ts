@@ -29,8 +29,8 @@ export class ActualizaComponentComponent implements OnInit {
 
   cuadroNombre:string="";
   cuadroApellido:string="";
-  cuadroCargo:string="";
-  cuadroSalario:number=0;
+  cuadroCargo:string | null="";
+  cuadroSalario:string="";
 
   indice: number;
   accion: number;
